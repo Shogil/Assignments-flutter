@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_assignment_1/app.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _textValue = 'Run the commnand';
-  String _newText = 'Update your system';
+  final String _newText = 'Update your system';
   _clickHere() {
     setState(
       () {
@@ -36,7 +37,7 @@ class _MyAppState extends State<MyApp> {
                 Color.fromARGB(255, 74, 154, 56),
               ),
             ),
-            child: Text(_textValue),
+            child: App(_textValue),
             onPressed: _clickHere,
           ),
         ),
